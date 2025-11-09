@@ -6,13 +6,14 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="api.tests.userTests2">
+      <class name="api.tests.StoreTests">
         <methods>
-          <include name="deleteUserByName"/>
-          <include name="getUserByName"/>
           <include name="setup"/>
+          <include name="deleteOrder"/>
+          <include name="createOrder"/>
+          <include name="getOrder"/>
         </methods>
-      </class> <!-- api.tests.userTests2 -->
+      </class> <!-- api.tests.StoreTests -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

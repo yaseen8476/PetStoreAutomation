@@ -5,10 +5,10 @@ import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
 import static org.testng.Assert.assertEquals;
 
-import java.io.File;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.json.JSONObject;
+import org.json.JSONTokener;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,11 +19,11 @@ import com.google.common.graph.EndpointPair;
 import api.endpoints.userEndPoints;
 import api.payloads.user;
 import io.restassured.http.ContentType;
+import io.restassured.internal.support.FileReader;
 import io.restassured.response.Response;
 
 public class userTests {
 
-	
 	Faker faker;
 	user userPayload;
 	public Logger logger; // for logs
@@ -40,14 +40,15 @@ public class userTests {
 		userPayload.setFirstName(faker.name().firstName());
 		userPayload.setLastName(faker.name().lastName());
 		userPayload.setEmail(faker.internet().safeEmailAddress());
-		userPayload.setPassword(faker.internet().password(5, 10));
+		userPayload.setPassword(faker.internet().password(5,10));
 		userPayload.setPhone(faker.phoneNumber().cellPhone());
 
-		//File f=new File(".\\complexrequest.json");
-
+		
+		
 		//logs
 
 		logger= LogManager.getLogger(this.getClass());
+		
 	}
 	
 	@Test(priority=1)

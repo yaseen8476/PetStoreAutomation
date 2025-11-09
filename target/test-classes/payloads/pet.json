@@ -1,0 +1,18 @@
+{
+  "id": 0,
+  "category": {
+    "id": 0,
+    "name": "${__RandomString(8)}"
+  },
+  "name": "${__RandomString(8)}",
+  "photoUrls": [
+    "${__RandomString(8)}"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "${__RandomString(8)}"
+    }
+  ],
+  "status": "available"
+}

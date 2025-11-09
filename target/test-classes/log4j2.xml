@@ -28,7 +28,7 @@
     <!-- Loggers -->
     <Loggers>
         <!-- Application Log Level -->
-        <Root level="info"><!--Here you can use multiple log levels All < Trace < Debug < Info < Warn < Error < Fata -->
+        <Root level="info"><!--Here you can use multiple log levels All < Trace < Debug < Info < Warn < Error < Fatal -->
             <AppenderRef ref="File"/> <!--<AppenderRef ref="Consloe"/>-->
         </Root>
     </Loggers>
